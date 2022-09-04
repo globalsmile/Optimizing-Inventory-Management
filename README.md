@@ -44,9 +44,11 @@ Based on the request that was made from the business we are following the user s
 
 # Data Sourcing
 
-The Dataset used for this analysis was presented by [Finex Skills Hub](https://www.finexskillshub.com) and available at:
+The Dataset used for this analysis was sourced from [AdventureWorks sample databases](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) 
 
-- [Client Finance Data](https://github.com/globalsmile/Client-Financial-Analysis/blob/main/Client%20Financial%20Data.xlsx)
+Additional dataset is available at: [Sales Budget](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms)
+
+
 
 ---
 
