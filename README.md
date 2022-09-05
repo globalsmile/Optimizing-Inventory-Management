@@ -260,19 +260,19 @@ Data visualization for the datasets was done in 3 folds using Microsoft Power BI
 -  The `Product Details`: Shows product specific information
 
 
-Figure 1 shows visualizations from `Sales Overview` worksheet
+Figure 1 shows visualizations from `Sales Overview` page
 
 | Figure 1 |
 | ----------- |
 | ![image](https://user-images.githubusercontent.com/106287208/188423026-e1b4d76d-ffcc-4f8c-a1b7-bd363922f524.png) |
 
-Figure 2 shows visualizations from `Customer Details` worksheet
+Figure 2 shows visualizations from `Customer Details` page
 
 | Figure 2 |
 | ----------- |
 | ![image](https://user-images.githubusercontent.com/106287208/188423353-266e6a75-d31a-4f2e-ba1d-30dd1f591050.png) |
 
-Figure 3 shows visualizations from `Product Details` worksheet
+Figure 3 shows visualizations from `Product Details` page
 
 | Figure 3 |
 | ----------- |
