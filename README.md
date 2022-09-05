@@ -13,8 +13,7 @@
 - [Data Preparation](https://github.com/globalsmile/Sales-Management-Analysis#Data-Preparation)
 - [Data Modeling](https://github.com/globalsmile/Sales-Management-Analysis#Data-Modeling)
 - [Data Visualization](https://github.com/globalsmile/Sales-Management-Analysis#Data-Visualization)
-- [Data Analysis](https://github.com/globalsmile/Sales-Management-Analysis#Data-Analysis)
-- [Insights](https://github.com/globalsmile/Sales-Management-Analysis#Insights)
+- [Data Analysis & Insights](https://github.com/globalsmile/Sales-Management-Analysis#Data-Analysis)
 - [Shareable link](https://github.com/globalsmile/Sales-Management-Analysis#Shareable-Link)
 
 
