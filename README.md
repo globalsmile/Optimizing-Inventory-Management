@@ -52,12 +52,14 @@ Based on the request that was made from the business we are following the user s
 
 # Data Preparation
 
-Data transformation was done in Power Query and the dataset was loaded into Microsoft Excel Power Pivot for modeling.
+Data cleaning and transformation was done in Microsoft SQL Server and the datasets was loaded into Microsoft Power BI Desktop for modeling.
 
-The client's financial data consists of  2 worksheets containing 2 tables:
+The sales management datasets consists of 4 tables:
 
-- `Transactions` which has `4 columns and 296 rows` of observation
-- `Budget` which has `15 columns and 24 rows` of observation
+- `DIM_Calender` which has `8 columns and 1461 rows` of observation
+- `DIM_Customers` which has `7 columns and 18484 rows` of observation
+- `DIM_Products` which has `11 columns and 606 rows` of observation
+- `FACT_InternetSales` which has `7 columns and 58168 rows` of observation
 
 The tabulation below shows the `Transactions` table with its column names and their description:
 | Column Name | Description |
