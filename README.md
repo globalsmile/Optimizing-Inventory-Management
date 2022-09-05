@@ -284,9 +284,9 @@ Figure 3 shows visualizations from `Product Details` page
 
 Measures used in visualization are:
 
-- Budget = `SUM(Transactions[Amount])`
-- Sales = `SUM(Budget[Amount])`
-- Sales / Budget = `[Budget]-[Actual]`
+- Budget = `SUM ( FACT_Budget[Budget] )`
+- Sales = `SUM ( FACT_InternetSales[SalesAmount] )`
+- Sales / Budget = `[Sales] - [Budget]`
 
 
 As shown from [Data Visualization](https://github.com/globalsmile/Sales-Management-Analysis#Data-Visualization), It can be deducted that for the year ending December 2021:
