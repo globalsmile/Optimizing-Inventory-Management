@@ -54,12 +54,178 @@ Based on the request that was made from the business we are following the user s
 
 Data cleaning and transformation was done in Microsoft SQL Server and the datasets was loaded into Microsoft Power BI Desktop for modeling.
 
-The sales management datasets consists of 4 tables:
+The sales management datasets consists of 5 tables:
 
 - `DIM_Calender` which has `8 columns and 1461 rows` of observation
 - `DIM_Customers` which has `7 columns and 18484 rows` of observation
 - `DIM_Products` which has `11 columns and 606 rows` of observation
 - `FACT_InternetSales` which has `7 columns and 58168 rows` of observation
+- `FACT_Budget` which has `2 columns and 18 rows` of observation
+
+Below are the SQL statements for cleansing and transforming necessary data.
+
+`DIM_Calender`
+
+```TSQL
+-- Cleansed DIM_Date Table --
+SELECT 
+  [DateKey], 
+  [FullDateAlternateKey] AS Date, 
+  --[DayNumberOfWeek], 
+  [EnglishDayNameOfWeek] AS Day, 
+  --[SpanishDayNameOfWeek], 
+  --[FrenchDayNameOfWeek], 
+  --[DayNumberOfMonth], 
+  --[DayNumberOfYear], 
+  --[WeekNumberOfYear],
+  [EnglishMonthName] AS Month, 
+  Left([EnglishMonthName], 3) AS MonthShort,   -- Useful for front end date navigation and front end graphs.
+  --[SpanishMonthName], 
+  --[FrenchMonthName], 
+  [MonthNumberOfYear] AS MonthNo, 
+  [CalendarQuarter] AS Quarter, 
+  [CalendarYear] AS Year --[CalendarSemester], 
+  --[FiscalQuarter], 
+  --[FiscalYear], 
+  --[FiscalSemester] 
+FROM 
+ [AdventureWorksDW2019].[dbo].[DimDate]
+WHERE 
+  CalendarYear >= 2019
+```
+
+`DIM_Customers`
+
+```TSQL
+-- Cleansed DIM_Customers Table --
+SELECT 
+  c.customerkey AS CustomerKey, 
+  --      ,[GeographyKey]
+  --      ,[CustomerAlternateKey]
+  --      ,[Title]
+  c.firstname AS [First Name], 
+  --      ,[MiddleName]
+  c.lastname AS [Last Name], 
+  c.firstname + ' ' + lastname AS [Full Name], 
+  -- Combined First and Last Name
+  --      ,[NameStyle]
+  --      ,[BirthDate]
+  --      ,[MaritalStatus]
+  --      ,[Suffix]
+  CASE c.gender WHEN 'M' THEN 'Male' WHEN 'F' THEN 'Female' END AS Gender,
+  --      ,[EmailAddress]
+  --      ,[YearlyIncome]
+  --      ,[TotalChildren]
+  --      ,[NumberChildrenAtHome]
+  --      ,[EnglishEducation]
+  --      ,[SpanishEducation]
+  --      ,[FrenchEducation]
+  --      ,[EnglishOccupation]
+  --      ,[SpanishOccupation]
+  --      ,[FrenchOccupation]
+  --      ,[HouseOwnerFlag]
+  --      ,[NumberCarsOwned]
+  --      ,[AddressLine1]
+  --      ,[AddressLine2]
+  --      ,[Phone]
+  c.datefirstpurchase AS DateFirstPurchase, 
+  --      ,[CommuteDistance]
+  g.city AS [Customer City] -- Joined in Customer City from Geography Table
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimCustomer] as c
+  LEFT JOIN dbo.dimgeography AS g ON g.geographykey = c.geographykey 
+ORDER BY 
+  CustomerKey ASC -- Ordered List by CustomerKey
+```
+
+`DIM_Products`
+
+```TSQL
+-- Cleansed DIM_Products Table --
+SELECT 
+  p.[ProductKey], 
+  p.[ProductAlternateKey] AS ProductItemCode, 
+  --      ,[ProductSubcategoryKey], 
+  --      ,[WeightUnitMeasureCode]
+  --      ,[SizeUnitMeasureCode] 
+  p.[EnglishProductName] AS [Product Name], 
+  ps.EnglishProductSubcategoryName AS [Sub Category], -- Joined in from Sub Category Table
+  pc.EnglishProductCategoryName AS [Product Category], -- Joined in from Category Table
+  --      ,[SpanishProductName]
+  --      ,[FrenchProductName]
+  --      ,[StandardCost]
+  --      ,[FinishedGoodsFlag] 
+  p.[Color] AS [Product Color], 
+  --      ,[SafetyStockLevel]
+  --      ,[ReorderPoint]
+  --      ,[ListPrice] 
+  p.[Size] AS [Product Size], 
+  --      ,[SizeRange]
+  --      ,[Weight]
+  --      ,[DaysToManufacture]
+  p.[ProductLine] AS [Product Line], 
+  --     ,[DealerPrice]
+  --      ,[Class]
+  --      ,[Style] 
+  p.[ModelName] AS [Product Model Name], 
+  --      ,[LargePhoto]
+  p.[EnglishDescription] AS [Product Description], 
+  --      ,[FrenchDescription]
+  --      ,[ChineseDescription]
+  --      ,[ArabicDescription]
+  --      ,[HebrewDescription]
+  --      ,[ThaiDescription]
+  --      ,[GermanDescription]
+  --      ,[JapaneseDescription]
+  --      ,[TurkishDescription]
+  --      ,[StartDate], 
+  --      ,[EndDate], 
+  ISNULL (p.Status, 'Outdated') AS [Product Status] 
+FROM 
+  [AdventureWorksDW2019].[dbo].[DimProduct] as p
+  LEFT JOIN dbo.DimProductSubcategory AS ps ON ps.ProductSubcategoryKey = p.ProductSubcategoryKey 
+  LEFT JOIN dbo.DimProductCategory AS pc ON ps.ProductCategoryKey = pc.ProductCategoryKey 
+order by 
+  p.ProductKey asc
+```
+
+`FACT_InternetSales`
+
+```TSQL
+-- Cleansed FACT_InternetSales Table --
+SELECT 
+  [ProductKey], 
+  [OrderDateKey], 
+  [DueDateKey], 
+  [ShipDateKey], 
+  [CustomerKey], 
+  --  ,[PromotionKey]
+  --  ,[CurrencyKey]
+  --  ,[SalesTerritoryKey]
+  [SalesOrderNumber], 
+  --  [SalesOrderLineNumber], 
+  --  ,[RevisionNumber]
+  --  ,[OrderQuantity], 
+  --  ,[UnitPrice], 
+  --  ,[ExtendedAmount]
+  --  ,[UnitPriceDiscountPct]
+  --  ,[DiscountAmount] 
+  --  ,[ProductStandardCost]
+  --  ,[TotalProductCost] 
+  [SalesAmount] --  ,[TaxAmt]
+  --  ,[Freight]
+  --  ,[CarrierTrackingNumber] 
+  --  ,[CustomerPONumber] 
+  --  ,[OrderDate] 
+  --  ,[DueDate] 
+  --  ,[ShipDate] 
+FROM 
+  [AdventureWorksDW2019].[dbo].[FactInternetSales]
+WHERE 
+  LEFT (OrderDateKey, 4) >= YEAR(GETDATE()) -2 -- Ensures we always only bring two years of date from extraction.
+ORDER BY
+  OrderDateKey ASC
+```
 
 The tabulation below shows the `Transactions` table with its column names and their description:
 | Column Name | Description |
