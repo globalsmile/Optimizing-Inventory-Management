@@ -227,44 +227,11 @@ ORDER BY
   OrderDateKey ASC
 ```
 
-The tabulation below shows the `Transactions` table with its column names and their description:
+The tabulation below shows the `FACT_Budget` table with its column names and their description:
 | Column Name | Description |
 | ----------- | ----------- |
-| Date | Represents the date of the transaction |
-| Description | Describes the transaction narration |
-| Category | Describes the category of the transaction |
-| Amount | Represents the amount  of the transaction |
-
-The tabulation below shows the `Budget` table with its column names and their description:
-| Column Name | Description |
-| ----------- | ----------- |
-| Category | Describes the category of the budget |
-| Class | Describes the class of the budget |
-| Type | Describes the the type of the budget |
-| Jan 2021 - Dec 2021 | Represents the budget amount for each month respectively |
-
-
-Data Cleaning for the dataset was done in power query as follows:
-
-- For the `Budget` table, the columns from `Jan 2021` to `Dec 2021` where unpivoted
-- The resulting `Attribute` and `Value` columns where renamed to `Date` and `Amount` respectively 
-- Validated the accuracy of the of `Date` column by changing the type to `date only`
-- Validated the accuracy of the of `Amount` column by changing the type to `whole number`
-- A dimension table named `categories` was created by referencing the `Budget` table
-- Unneccessary columns were removed from the `categories` table
-- Duplicate rows were removed from `categories` table
-
-To ensure the accuracy of the dates in the `Date` column each of the tables, a date table was created for referencing using the M-formula:
-
-`{Number.From(List.Min(Transactions[Date]))..Number.From(List.Max(Transactions[Date]))}`
-
-Here is a breakdown of what the formula does:
-
-For the dataset, we want the start date to reflect the earliest to latest date that we have in the data: January 01, 2021 - December 01, 2021.
-
-`Month`,` Month Name`, `Year` columns were extracted from the date table
-
-The date table was named `Calender`.
+| Date | Represents the date budget was made|
+| Budget | Represents the amount budgeted |
 
 ---
 
