@@ -253,15 +253,30 @@ After the dataset was cleaned and transformed, it was ready to be modeled(using 
 
 # Data Visualization
 
-Data visualization for the dataset was done using Microsft Excel:
+Data visualization for the datasets was done in 3 folds using Microsoft Power BI Desktop:
 
-- The `Dashboard` worksheet: Shows the Actual amount, Budget amount, Balance, etc of the client.
+- The `Content Analysis`: Shows the tools by mention, word cloud, Top active users, etc.
+-  The `Summary`: Shows the total number of tweets, total number of users, Tweet by day of the week, etc.
+-  The `Dashboard`: Shows visualization from `Content Analysis` and `Summary` to provide answer to the [Problem Statement](https://github.com/globalsmile/Twitter-Sentiment-Analysis#Problem-Statement).
 
-Figure 1 shows visualizations from `Dashboard` worksheet
+
+Figure 1 shows visualizations from `Content Analysis` worksheet
 
 | Figure 1 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/187007496-33b3b2c1-1016-4b51-ba78-a588eab3c48b.png) |
+| ![image](https://user-images.githubusercontent.com/106287208/187567316-46bc6332-7507-4f11-b3c7-a18a52ed8e14.png) |
+
+Figure 2 shows visualizations from `Summary` worksheet
+
+| Figure 2 |
+| ----------- |
+| ![image](https://user-images.githubusercontent.com/106287208/187567503-2db262f6-c7f2-449d-9b11-01ff7e084022.png) |
+
+Figure 3 shows visualizations from `Dashboard` worksheet
+
+| Figure 3 |
+| ----------- |
+| ![image](https://user-images.githubusercontent.com/106287208/187677655-9bbd0398-f0fe-4af0-870f-f9e090633f13.png) |
 
 
 ---
