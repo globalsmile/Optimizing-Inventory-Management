@@ -1,6 +1,6 @@
 # Sales Management Analysis
 
-<img align="right" alt="Snoring Partner" width="1000" height = "400" src="https://i0.wp.com/leonine.com.ng/new/wp-content/uploads/2020/03/Leonine-Advisory-Page-Routine-Advisory-Services.jpg?resize=1024%2C729&ssl=1">
+<img align="right" alt="Sales Management Analysis" width="1000" height = "400" src="https://monday.com/blog/wp-content/uploads/2021/05/sales-analysis.jpg">
 
 ---
 
