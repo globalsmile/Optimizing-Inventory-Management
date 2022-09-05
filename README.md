@@ -255,24 +255,24 @@ After the dataset was cleaned and transformed, it was ready to be modeled(using 
 
 Data visualization for the datasets was done in 3 folds using Microsoft Power BI Desktop:
 
-- The `Content Analysis`: Shows the tools by mention, word cloud, Top active users, etc.
--  The `Summary`: Shows the total number of tweets, total number of users, Tweet by day of the week, etc.
--  The `Dashboard`: Shows visualization from `Content Analysis` and `Summary` to provide answer to the [Problem Statement](https://github.com/globalsmile/Twitter-Sentiment-Analysis#Problem-Statement).
+- The `Sales Overview`: Shows the sales vs budget KPI, sales by top 10 customers, sales by top 10 products, e.t.c
+-  The `Customer Details`: Shows customer specific information
+-  The `Product Details`: Shows product specific information
 
 
-Figure 1 shows visualizations from `Content Analysis` worksheet
+Figure 1 shows visualizations from `Sales Overview` worksheet
 
 | Figure 1 |
 | ----------- |
 | ![image](https://user-images.githubusercontent.com/106287208/187567316-46bc6332-7507-4f11-b3c7-a18a52ed8e14.png) |
 
-Figure 2 shows visualizations from `Summary` worksheet
+Figure 2 shows visualizations from `Customer Details` worksheet
 
 | Figure 2 |
 | ----------- |
 | ![image](https://user-images.githubusercontent.com/106287208/187567503-2db262f6-c7f2-449d-9b11-01ff7e084022.png) |
 
-Figure 3 shows visualizations from `Dashboard` worksheet
+Figure 3 shows visualizations from `Product Details` worksheet
 
 | Figure 3 |
 | ----------- |
