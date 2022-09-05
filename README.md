@@ -237,13 +237,13 @@ The tabulation below shows the `FACT_Budget` table with its column names and the
 
 # Data Modeling
 
-After the dataset was cleaned and transformed, it was ready to be modeled(using Power Pivot).
+After the dataset was cleaned and transformed, it was ready to be modeled(using Power BI Desktop).
 
-- The `Calender` table was marked as the official date table in the dataset.
-- A `one-to-many (*:1) relationship` was created between the `Budget` and the `Calender` tables using the `date` column in each of the tables
-- A `one-to-many (*:1) relationship` was created between the `Transactions` and the `Calender` tables using the `date` column in each of the tables 
-- A `one-to-many (*:1) relationship` was created between the `Transactions` and the `Categories` tables using the `Category` column in each of the tables
-- A `one-to-many (*:1) relationship` was created between the `budget` and the `Categories` tables using the `Category` column in each of the tables 
+- The `DIM_Calender` table was marked as the official date table in the dataset.
+- A `one-to-many (*:1) relationship` was created between the `Fact_InternetSales` and the `DIM_Calender` tables using the `date` column in each of the tables
+- A `one-to-many (*:1) relationship` was created between the `Fact_InternetSales` and the `DIM_Customers` tables using the `date` column in each of the tables 
+- A `one-to-many (*:1) relationship` was created between the `Fact_InternetSales` and the `DIM_Products` tables using the `Category` column in each of the tables
+- A `one-to-many (1:1) relationship` was created between the `FACT_Budget` and the `DIM_Calender` tables using the `Category` column in each of the tables 
 - The realtioships formed in the data model is a `Star Schema` and is shown below:
 
 <img align="right" alt="Data Model" width="1000" height = "400" src="https://user-images.githubusercontent.com/106287208/183560342-f5e144bd-ffe1-476e-a264-172b0b23462f.png">
