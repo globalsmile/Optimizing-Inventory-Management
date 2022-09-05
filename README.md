@@ -280,7 +280,7 @@ Figure 3 shows visualizations from `Product Details` page
 
 ---
 
-# Data Analysis
+# Data Analysis & Insights
 
 Measures used in visualization are:
 
@@ -291,27 +291,16 @@ Measures used in visualization are:
 
 As shown from [Data Visualization](https://github.com/globalsmile/Sales-Management-Analysis#Data-Visualization), It can be deducted that for the year ending December 2021:
 
-- The client budgeted a total amount of `$230,502`
-- The client spent a total amount of `$193,228`
-- The client has a balance of `$37,274`
-
----
-
-# Insights
-
-As shown by [Data Visualization](https://github.com/globalsmile/Client-Finacial-Analysis#Data-Visualization), It can be deducted that:
-
-- The client spent the most in the month of `January`
-- The client spent the least in the month of `November`
-- The client has spent the highest amount on `Social`
-
-
-Key Note: The client has a monthly budget amount of more than `$16k`,also the client has been able to stay afloat of this budget amount and as such stable enough to warrant a monetary investment
+- Sales is up by `1,051,550`
+- The top customer by sales is `Jordan Turner`
+- The top product by sales is `Mountain-200 Black,42`
+- The top product category by sales is the `Bikes` occupying 93.93% of the total sales
+- There is a positive correlation between `Sales` and `Budget`
 
 ---
 
 # Shareable Link
 
-You can interact with the dashboard here: 
+You can interact with the report here: 
 
-[Dashboard](https://badmus67-my.sharepoint.com/:x:/g/personal/mohammed_badmus67_onmicrosoft_com/EeAqCZw-wahIi8P5zP4KKHEB7QWpODKX0WIrna0LLl70PA?e=OLavxD)
+[Dashboard](https://app.powerbi.com/view?r=eyJrIjoiNWVmNDRjNjEtNjZjZC00OGE2LTllYjktMDRjMmMyOTE4ZDYxIiwidCI6IjQ5ODY4YWYzLWNjNWYtNDIxNC04YjdmLTQwZjM3NDY0OWEwOSJ9)
