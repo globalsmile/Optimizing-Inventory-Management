@@ -264,20 +264,19 @@ Figure 1 shows visualizations from `Sales Overview` worksheet
 
 | Figure 1 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/187567316-46bc6332-7507-4f11-b3c7-a18a52ed8e14.png) |
+| ![image](https://user-images.githubusercontent.com/106287208/188423026-e1b4d76d-ffcc-4f8c-a1b7-bd363922f524.png) |
 
 Figure 2 shows visualizations from `Customer Details` worksheet
 
 | Figure 2 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/187567503-2db262f6-c7f2-449d-9b11-01ff7e084022.png) |
+| ![image](https://user-images.githubusercontent.com/106287208/188423353-266e6a75-d31a-4f2e-ba1d-30dd1f591050.png) |
 
 Figure 3 shows visualizations from `Product Details` worksheet
 
 | Figure 3 |
 | ----------- |
-| ![image](https://user-images.githubusercontent.com/106287208/187677655-9bbd0398-f0fe-4af0-870f-f9e090633f13.png) |
-
+| ![image](https://user-images.githubusercontent.com/106287208/188423526-fe1c6dd3-73da-4f8f-b757-5d585be1eec3.png) |
 
 ---
 
