@@ -66,11 +66,9 @@ Below are the SQL statements for cleansing and transforming necessary data.
 `DIM_Calender`
 
 ```TSQL
--- Cleansed DIM_Date Table --
 SELECT 
   [DateKey], 
   [FullDateAlternateKey] AS Date, 
-  --[DayNumberOfWeek], 
   [EnglishDayNameOfWeek] AS Day, 
   [EnglishMonthName] AS Month, 
   Left([EnglishMonthName], 3) AS MonthShort,  
@@ -86,7 +84,6 @@ WHERE
 `DIM_Customers`
 
 ```TSQL
--- Cleansed DIM_Customers Table --
 SELECT 
   c.customerkey AS CustomerKey, 
   c.firstname AS [First Name], 
@@ -105,7 +102,6 @@ ORDER BY
 `DIM_Products`
 
 ```TSQL
--- Cleansed DIM_Products Table --
 SELECT 
   p.[ProductKey], 
   p.[ProductAlternateKey] AS ProductItemCode, 
@@ -129,7 +125,6 @@ order by
 `FACT_InternetSales`
 
 ```TSQL
--- Cleansed FACT_InternetSales Table --
 SELECT 
   [ProductKey], 
   [OrderDateKey], 
