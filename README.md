@@ -23,7 +23,7 @@
 
 The goal of this sales management analysis is to create an executive sales report for sales managers.
 
-Essentially, we want to focus it on how much we have sold of what products, to which clients and how it has been over time
+Essentially, The focus is on how much have been sold of what products, to which clients and how it has been over time
 
 ---
 
