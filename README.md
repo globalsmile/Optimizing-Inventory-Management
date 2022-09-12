@@ -7,7 +7,6 @@
 
 # Table of Contents
 
-- [Introduction](https://github.com/globalsmile/Sales-Management-Analysis#introduction)
 - [Problem Statement](https://github.com/globalsmile/Sales-Management-Analysis#Problem-Statement)
 - [Data Sourcing](https://github.com/globalsmile/Sales-Management-Analysis#Data-Sourcing)
 - [Data Preparation](https://github.com/globalsmile/Sales-Management-Analysis#Data-Preparation)
@@ -16,14 +15,6 @@
 - [Data Analysis & Insights](https://github.com/globalsmile/Sales-Management-Analysis#Data-Analysis)
 - [Shareable link](https://github.com/globalsmile/Sales-Management-Analysis#Shareable-Link)
 
-
----
-
-# Introduction
-
-The goal of this sales management analysis is to create an executive sales report for sales managers.
-
-Essentially, the focus is on how much have been sold of what products, to which clients and how it has been over time
 
 ---
 
