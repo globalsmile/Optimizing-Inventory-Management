@@ -1,6 +1,6 @@
 # Sales Management Analysis
 
-<img align="right" alt="Sales Management Analysis" width="1000" height = "400" src="https://st4.depositphotos.com/36895960/39411/i/450/depositphotos_394119458-stock-photo-businessman-working-data-document-graph.jpg">
+<img align="right" alt="Sales Management Analysis" width="1000" height = "500" src="https://user-images.githubusercontent.com/106287208/188423026-e1b4d76d-ffcc-4f8c-a1b7-bd363922f524.png">
 
 ---
 
