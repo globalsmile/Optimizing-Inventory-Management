@@ -1,55 +1,62 @@
-# Sales Management Analysis
+# Optimizing Inventory Management
 
-<img align="right" alt="Sales Management Analysis" width="1000" height = "500" src="https://user-images.githubusercontent.com/106287208/188423026-e1b4d76d-ffcc-4f8c-a1b7-bd363922f524.png">
+<img align="right" alt="Optimizing Inventory Management" width="1000" height = "500" src="https://user-images.githubusercontent.com/106287208/188423026-e1b4d76d-ffcc-4f8c-a1b7-bd363922f524.png">
 
 ---
 
 
 # Table of Contents
 
-- [Problem Statement](https://github.com/globalsmile/Sales-Management-Analysis#Problem-Statement)
-- [Data Sourcing](https://github.com/globalsmile/Sales-Management-Analysis#Data-Sourcing)
-- [Data Preparation](https://github.com/globalsmile/Sales-Management-Analysis#Data-Preparation)
-- [Data Modeling](https://github.com/globalsmile/Sales-Management-Analysis#Data-Modeling)
-- [Data Visualization](https://github.com/globalsmile/Sales-Management-Analysis#Data-Visualization)
-- [Data Analysis & Insights](https://github.com/globalsmile/Sales-Management-Analysis#Data-Analysis)
-- [Shareable link](https://github.com/globalsmile/Sales-Management-Analysis#Shareable-Link)
+- [Introduction](https://github.com/globalsmile/Optimizing-Inventory-Management#Introduction)
+- [Problem Statement](https://github.com/globalsmile/Optimizing-Inventory-Management#Problem-Statement)
+- [Data Sourcing](https://github.com/globalsmile/Optimizing-Inventory-Management#Data-Sourcing)
+- [Data Preparation](https://github.com/globalsmile/Optimizing-Inventory-Management#Data-Preparation)
+- [Data Modeling](https://github.com/globalsmile/Optimizing-Inventory-Management#Data-Modeling)
+- [Data Visualization and Analysis](https://github.com/globalsmile/Optimizing-Inventory-Management#Data-Visualization-and-Analysis)
+- [Shareable link](https://github.com/globalsmile/Optimizing-Inventory-Management#Shareable-Link)
 
+
+---
+
+# Introduction
+
+SellCheapy Retail is a chain of department stores that sells a wide range of products, including bikes and different components. Despite having a large customer base, the company has been struggling to 
+increase sales in recent years. The management team is looking to use data analysis to understand customer spending patterns and make changes to their sales and marketing strategies to improve performance.
 
 ---
 
 # Problem Statement
 
-Based on the request that was made from the business we are following the user stories that were defined to fulfill delivery and ensure that acceptance criteria’s were maintained throughout the project.
+Based on the request that was made from the management team we are following the user stories that were defined to fulfill delivery and ensure that acceptance criteria’s were maintained throughout the project.
 
 | #	As a (role) | I want (request / demand) | So that I (user value) | Acceptance Criteria |
 | ----------- | ----------- | ----------- | ----------- |
 | 1	Sales Manager | To get a dashboard overview of internet sales | Can follow better which customers and products sells the best | A Power BI dashboard which updates data once a day |
 | 2	Sales Representative | A detailed overview of Internet Sales per Customers | Can follow up my customers that buys the most and who we can sell more to | A Power BI dashboard which allows me to filter data for each customer |
 | 3	Sales Representative | A detailed overview of Internet Sales per Products | Can follow up my Products that sells the most | A Power BI dashboard which allows me to filter data for each Product |
-| 4	Sales Manager | A dashboard overview of internet sales | Follow sales over time against budget | A Power Bi dashboard with graphs and KPIs comparing against budget. |
+| 4	Sales Manager | A dashboard overview of internet sales | Follow sales over time against budget | A Power BI dashboard with graphs and KPIs comparing against budget. |
 
 
 ---
 
 # Data Sourcing
 
-- The Dataset used for this analysis was sourced from [AdventureWorks sample databases](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) 
-- The additional dataset used for this analysis is available at: [Sales Budget](https://github.com/globalsmile/Sales-Management-Analysis/blob/main/SalesBudget.xlsx)
+- The data set used for this analysis was sourced from [AdventureWorks sample databases](https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms) 
+- The additional data set used for this analysis is available at: [Sales Budget](https://github.com/globalsmile/Optimizing-Inventory-Management/blob/main/SalesBudget.xlsx)
 - The query used to update the database can be found at [Update Query](https://github.com/globalsmile/Sales-Management-Analysis/blob/main/Update_AdventureWorksDW_Data.sql)
 
 ---
 
 # Data Preparation
 
-Data cleaning and transformation was done in Microsoft SQL Server and the datasets was loaded into Microsoft Power BI Desktop for modeling.
+Data cleaning and transformation was done in Microsoft SQL Server and the data sets was loaded into Microsoft Power BI Desktop for modeling.
 
-The sales management datasets consists of 5 tables:
+The data sets are split into 5 tables:
 
-- `DIM_Calender` which has `8 columns and 1461 rows` of observation
-- `DIM_Customers` which has `7 columns and 18484 rows` of observation
-- `DIM_Products` which has `11 columns and 606 rows` of observation
-- `FACT_InternetSales` which has `7 columns and 58168 rows` of observation
+- `DIM_Calender` contains `8 columns and 1461 rows` 
+- `DIM_Customers` contains `7 columns and 18484 rows`
+- `DIM_Products` contains `11 columns and 606 rows`
+- `FACT_InternetSales` contains `7 columns and 58168 rows`
 - `FACT_Budget` which has `2 columns and 18 rows` of observation
 
 Below are the SQL statements for cleansing and transforming necessary data.
@@ -156,13 +163,15 @@ After the dataset was cleaned and transformed, it was ready to be modeled(using 
 
 ---
 
-# Data Visualization
+# Data Visualization and Analyis
 
-Data visualization for the datasets was done in 3 folds using Microsoft Power BI Desktop:
+Data visualization for the datasets was done in 3 folds using Microsoft Power BI Desktop.
 
-- The `Sales Overview`: Shows the sales vs budget KPI, sales by top 10 customers, sales by top 10 products, e.t.c
--  The `Customer Details`: Shows customer specific information
--  The `Product Details`: Shows product specific information
+Based on the business problem, the following report was prepared:
+
+- The `Sales Overview` page: contains the sales vs budget KPI, sales by top 10 customers, sales by top 10 products, e.t.c
+-  The `Customer Details` page: contains customer specific information
+-  The `Product Details` page: contains product specific information
 
 
 Figure 1 shows visualizations from `Sales Overview` page
@@ -183,26 +192,16 @@ Figure 3 shows visualizations from `Product Details` page
 | ----------- |
 | ![image](https://user-images.githubusercontent.com/106287208/188423526-fe1c6dd3-73da-4f8f-b757-5d585be1eec3.png) |
 
----
 
-# Data Analysis & Insights
-
-Measures used in visualization are:
+Measures used in this visualizations are:
 
 - Budget = `SUM ( FACT_Budget[Budget] )`
 - Sales = `SUM ( FACT_InternetSales[SalesAmount] )`
 - Sales / Budget = `[Sales] - [Budget]`
 
 
-As shown from [Data Visualization](https://github.com/globalsmile/Sales-Management-Analysis#Data-Visualization), It can be deducted that for the year ending December 2021:
-
-- Sales is up by `1,051,550`
-- The top customer by sales is `Jordan Turner`
-- The top product by sales is `Mountain-200 Black,42`
-- The top product category by sales is the `Bikes` occupying 93.93% of the total sales
-- There is a positive correlation between `Sales` and `Budget`
-
 ---
+
 
 # Shareable Link
 
